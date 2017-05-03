@@ -1,0 +1,1 @@
+"# grails-validate-issue-b" 
