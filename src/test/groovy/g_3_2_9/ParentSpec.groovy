@@ -13,4 +13,15 @@ class ParentSpec extends Specification {
         expect:"fix me"
         !new Parent(child: null).validate(['child'])
     }
+
+    void "test as described in readme"() {
+        when:
+        def map = [
+                "child": ["dummy": "populated"]
+        ]
+        Parent parent  =  new Parent( map )
+
+        then:
+        parent.validate()
+    }
 }
