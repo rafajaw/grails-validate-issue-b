@@ -7,6 +7,6 @@ class Child {
 	static belongsTo = [ parent : Parent ]
 
     static constraints = {
-		parent( nullable: false )
+		parent nullable: false
     }
 }
