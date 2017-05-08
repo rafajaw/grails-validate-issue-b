@@ -9,14 +9,13 @@ import spock.lang.Specification
 @TestFor(Child)
 class ChildSpec extends Specification {
 
-    def setup() {
-    }
-
-    def cleanup() {
-    }
-
-    void "test something"() {
+    void "dummy cannot be null"() {
         expect:"fix me"
-            true == false
+        !new Child(dummy: null).validate(['dummy'])
+    }
+
+    void "parent cannot be null"() {
+        expect:"fix me"
+        !new Child(parent: null).validate(['parent'])
     }
 }
